@@ -1,0 +1,76 @@
+@import 'variables/colors';
+
+@keyframes scaleIn {
+  from {
+    transform: scale(.5, .5);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2.5, 2.5);
+    opacity: 0;
+  }
+}
+
+.human-body-container {
+  position: relative;
+}
+
+.human-body-image {
+  height: 500px;
+  width: 500px;
+}
+
+.human-body-chakra {
+  border-radius: 50%;
+  border: 1px solid black;  
+  display: inline-block;
+  height: 20px;
+  &:hover {
+    animation: scaleIn 2s infinite cubic-bezier(.36, .11, .89, .32);
+  }
+  position: absolute;
+  left: 239px;
+  width: 20px;
+}
+
+.crown {
+  @extend .human-body-chakra;
+  background-color: violet;
+  top: 100px;
+}
+
+.third-eye {
+  @extend .human-body-chakra;
+  background-color: indigo;
+  top: 130px;
+}
+
+.throat {
+  @extend .human-body-chakra;
+  background-color: blue;
+  top: 180px;
+}
+
+.heart {
+  @extend .human-body-chakra;
+  background-color: green;
+  top: 220px;
+}
+
+.solar-plexus {
+  @extend .human-body-chakra;
+  background-color: yellow;
+  top: 270px;
+}
+
+.sexual {
+  @extend .human-body-chakra;
+  background-color: orange;
+  top: 320px;
+}
+
+.root {
+  @extend .human-body-chakra;
+  background-color: red;
+  bottom: 110px;
+}
