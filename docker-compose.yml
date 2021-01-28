@@ -1,0 +1,44 @@
+version: "3.8"
+services:
+  back:
+    environment:
+      - NODE_ENV=development
+    container_name: back
+    build:
+      context: ./packages/back
+      dockerfile: Dockerfile
+    ports:
+      ["8080:8080"]
+    links:
+      ["db"]
+    command: "npm run start-dev"
+    volumes:
+      - "./packages/back:/back"
+      - "./packages/back/node_modules"
+  db:
+    environment:
+      - MONGO_USER=admin
+      - MONGO_PASS=admin
+    container_name: db
+    image: mongo
+    ports:
+      ["27017:27017"]
+  front:
+    container_name: front
+    stdin_open: true
+    build:
+      context: ./packages/front
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./packages/front:/front"
+      - "./packages/front/node_modules"
+    command: "yarn start"
+
+volumes:
+  back:
+  front:
+
+networks:
+  default:

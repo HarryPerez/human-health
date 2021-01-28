@@ -1,0 +1,24 @@
+@import 'variables/colors';
+
+@import 'variables/breakpoints';
+
+.checkbox {
+  color: $white;
+  background-color: $azure;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  @include sm {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  @include sm {
+    flex-direction: column;
+  }
+  justify-content: space-evenly;
+}

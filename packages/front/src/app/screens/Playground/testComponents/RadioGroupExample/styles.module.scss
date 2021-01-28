@@ -1,0 +1,11 @@
+@import 'variables/colors';
+
+@import 'variables/breakpoints';
+
+.container {
+  display: flex;
+  @include sm {
+    flex-direction: column;
+  }
+  gap: 15px;
+}

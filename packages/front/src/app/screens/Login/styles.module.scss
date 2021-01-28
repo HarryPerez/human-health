@@ -1,0 +1,29 @@
+@import 'src/scss/variables/colors';
+
+
+.login-container {
+  background: $white;
+}
+
+.login-welcome {
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 45px;
+}
+
+.login-icon-title {
+  height: 200px;
+  margin-bottom: 30px;
+  width: 200px;
+}
+
+.login-form-container {
+  position: relative;
+  width: 500px;
+}
+
+.login-banner {
+  bottom: 0;
+  max-height: 300px;
+  position: absolute;
+}

@@ -1,0 +1,10 @@
+@import 'variables/breakpoints';
+
+.container {
+  align-items: center;
+  display: flex;
+  @include sm {
+    flex-direction: column;
+  }
+  justify-content: space-evenly;
+}

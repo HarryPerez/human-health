@@ -1,0 +1,19 @@
+@import 'variables/colors';
+@import 'variables/breakpoints';
+
+.example-button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @include sm {
+    flex-direction: column;
+  }
+}
+
+.example-button {
+  max-width: 300px;
+  height: 70px;
+  color: $white;
+  background-color: $azure;
+}

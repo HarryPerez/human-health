@@ -1,0 +1,31 @@
+{
+  "name": "web-bootstrap",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "Web bootstrap with front and back unified",
+  "scripts": {
+    "audit-back": "npm audit --prefix packages/back",
+    "audit-front": "npm audit --prefix packages/front",
+    "audit-all": "npm run audit-front && npm run audit-back",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clone-front": "git subtree add --prefix=packages/front https://gitlab.com/zerf-development/react-bootstrap.git master",
+    "clone-back": "git subtree add --prefix=packages/back https://gitlab.com/zerf-development/nodejs-bootstrap.git master",
+    "install": "npm run install-front && npm run install-back",
+    "install-front": "yarn --cwd packages/front install",
+    "start-front": "yarn --cwd packages/front start",
+    "update-front": "git subtree pull --prefix=packages/front https://gitlab.com/zerf-development/react-bootstrap.git master",
+    "install-back": "yarn --cwd packages/back install",
+    "start-back": "yarn --cwd packages/back start",
+    "update-back": "git subtree pull --prefix=packages/back https://gitlab.com/zerf-development/nodejs-bootstrap.git master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/zerf-development/web-bootstrap.git"
+  },
+  "author": "Zerf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/zerf-development/web-bootstrap/issues"
+  },
+  "homepage": "https://gitlab.com/zerf-development/web-bootstrap#readme"
+}

@@ -1,0 +1,46 @@
+@import 'src/scss/variables/colors';
+
+@import 'src/scss/variables/breakpoints';
+
+@import 'src/scss/animations';
+
+.modal-container {
+  @extend %appear;
+
+  background-color: $white;
+  border: 1px solid $dove-gray;
+  border-radius: $default-border-radius;
+  max-width: $max-width-modal-default;
+  outline: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.modal-overlay {
+  align-items: center;
+  background-color: rgba($black, 0.5);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $modal-z-index;
+}
+
+.body {
+  overflow: hidden;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  $modal-margin: 10px;
+
+  .modal-container {
+    margin: $modal-margin;
+    max-height: 90%;
+    overflow: auto;
+    width: calc(100% - #{$modal-margin} * 2);
+  }
+}

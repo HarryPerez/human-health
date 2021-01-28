@@ -1,0 +1,33 @@
+@import 'variables/colors';
+
+@import 'variables/breakpoints';
+
+.container {
+  align-items: center;
+  display: flex;
+  @include sm {
+    flex-direction: column;
+  }
+  justify-content: space-around;
+}
+
+.select-container {
+  border: 3px solid $azure;
+  border-radius: 15px;
+  height: 50px;
+  @include sm {
+    width: auto;
+  }
+  width: 300px;
+}
+
+.select {
+  border-radius: 15px;
+  color: $azure;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.message {
+  min-width: 105px;
+}

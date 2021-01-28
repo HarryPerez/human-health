@@ -1,0 +1,20 @@
+@import 'variables/breakpoints';
+
+.example-input-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @include sm {
+    flex-direction: column;
+  } 
+}
+
+.example-input-element {
+  max-width: 300px;
+  width: 100%;
+
+  @include sm {
+    max-width: 150px;
+  }
+}
